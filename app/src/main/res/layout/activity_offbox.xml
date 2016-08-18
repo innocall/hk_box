@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+   	
+    <TextView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/dim_30_sp"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:text="十分抱歉，您的柠檬盒子已暂停服务，请联系商家。"/>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- <string name="boxurl">http://112.124.109.234:8080</string> -->
+    <!-- <string name="boxurl">http://112.124.109.234:8090</string> -->
+    <!-- <string name="boxurl">http://61.233.25.25:8080</string> -->
+    <!--  <string name="boxurl">http://192.168.2.65:8080</string> -->
+     <string name="boxurl">http://nmoss.clublemon.com:8080</string> 
+
+</resources>

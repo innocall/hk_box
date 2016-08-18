@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+    android:background="#00000000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_190_dp" >
+
+        <ImageButton
+            android:id="@+id/ib_apply_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/selector_border_focused_click_default2" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <TextView
+                android:id="@+id/tv_apply_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dim_40_dp"
+                android:text="设置"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="#fff"
+                android:textSize="@dimen/dim_28_sp"
+                />
+
+            <ImageView
+                android:id="@+id/iv_apply_icon"
+                android:layout_width="@dimen/dim_100_dp"
+                android:layout_height="@dimen/dim_100_dp"
+                android:layout_above="@id/tv_apply_name"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="@dimen/dim_15_dp"
+                android:src="@drawable/setting" 
+                android:background="#00000000"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

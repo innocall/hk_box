@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">柠檬OSS</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="pb_text">正在加载...</string>
+    
+    <!-- 提示框 -->
+	<string name="title">提示</string>
+	<string name="msg1">获取数据失败！您可以：</string>
+	<string name="msg2">1、检查您的网络连接。</string>
+	<string name="msg">检查网络</string>
+	
+</resources>

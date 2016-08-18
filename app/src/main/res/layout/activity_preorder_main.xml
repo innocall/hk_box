@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical" >
+
+    <!-- 标题栏 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginLeft="@dimen/dim_60_dp"
+        android:layout_marginRight="@dimen/dim_60_dp"
+        android:layout_marginTop="@dimen/dim_40_dp"
+        android:layout_weight="1.5"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="@dimen/dim_100_dp"
+            android:layout_height="@dimen/dim_80_dp"
+            android:scaleType="fitCenter"
+            android:background="@drawable/left_arrow" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dim_05_dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_order_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dip"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textSize="@dimen/dim_30_sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:text="详情"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/dim_25_sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 中间部分 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_marginLeft="@dimen/dim_60_dp"
+        android:layout_marginRight="@dimen/dim_60_dp"
+        android:layout_marginTop="@dimen/dim_10_dp"
+        android:layout_marginBottom="@dimen/dim_80_dp"
+        android:layout_weight="8"
+        android:orientation="vertical" >
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/include_content_main" />
+    </LinearLayout>
+
+</LinearLayout>

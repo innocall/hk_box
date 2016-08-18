@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <!-- 左边 -->
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/dim_15_dp"
+            android:layout_weight="4"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_order_image"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="4"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/iv_order_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/enterprise_big" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_order_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:background="#9ba2b4"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dim_100_dp"
+                    android:layout_marginRight="@dimen/dim_100_dp"
+                    android:layout_marginTop="@dimen/dim_100_dp"
+                    android:text="请输入预定手机号码："
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/dim_30_sp" />
+
+                <EditText
+                    android:id="@+id/et_order_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_80_dp"
+                    android:layout_marginLeft="@dimen/dim_100_dp"
+                    android:layout_marginRight="@dimen/dim_100_dp"
+                    android:layout_marginTop="@dimen/dim_20_dp"
+                    android:inputType="phone"
+                    android:textSize="@dimen/dim_30_sp" />
+                <requestFocus />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_order_success"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="4"
+                android:gravity="center_horizontal"
+                android:background="#9ba2b4"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dim_50_dp"
+                    android:layout_marginRight="@dimen/dim_50_dp"
+                    android:layout_marginTop="@dimen/dim_100_dp"
+                    android:gravity="center"
+                    android:text="恭喜您！"
+                    android:textStyle="bold"
+                    android:textColor="#ff0066"
+                    android:textSize="@dimen/dim_50_sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dim_50_dp"
+                    android:layout_marginRight="@dimen/dim_50_dp"
+                    android:gravity="center"
+                    android:layout_marginTop="20dip"
+                    android:text="您的预约已经成功提交，"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/dim_28_sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dim_50_dp"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/dim_50_dp"
+                    android:layout_marginTop="@dimen/dim_20_dp"
+                    android:text="请耐心等待工作人员与您联系!"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/dim_28_sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 右边 -->
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/bt_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_button_set_focused_click"
+                    android:text="上一步"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/dim_30_sp"
+                    android:paddingTop="@dimen/dim_05_dp"
+                    android:paddingBottom="@dimen/dim_05_dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_marginTop="@dimen/dim_15_dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/bt_next"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_button_set_focused_click"
+                    android:text="下一步"
+                    android:textColor="#ffffff"
+                    android:paddingTop="@dimen/dim_05_dp"
+                    android:paddingBottom="@dimen/dim_05_dp"
+                    android:textSize="@dimen/dim_30_sp"
+                    android:textStyle="bold" />
+
+                <requestFocus />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

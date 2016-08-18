@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dim_60_dp"
+        android:layout_marginRight="@dimen/dim_60_dp"
+        android:layout_marginTop="@dimen/dim_40_dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="@dimen/dim_100_dp"
+            android:layout_height="@dimen/dim_80_dp"
+            android:scaleType="fitCenter"
+            android:background="@drawable/left_arrow" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dim_05_dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_video_title_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dip"
+                android:text="别克君威，购车零负担"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/dim_30_sp" />
+
+            <TextView
+                android:id="@+id/tv_video_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:text="详情"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/dim_25_sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 三块显示部分 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <!-- 第一块 -->
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dim_80_dp"
+            android:layout_marginLeft="@dimen/dim_60_dp"
+            android:layout_marginTop="@dimen/dim_20_dp"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:focusable="false"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/iv_video_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:focusable="false"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+
+        <!-- 第二块 -->
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dim_80_dp"
+            android:layout_marginLeft="@dimen/dim_10_dp"
+            android:layout_marginRight="@dimen/dim_60_dp"
+            android:layout_marginTop="@dimen/dim_20_dp"
+            android:layout_weight="2.27"
+            android:background="@drawable/account_bg" >
+
+            <LinearLayout
+                android:id="@+id/ll_video_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dim_20_dp"
+                android:layout_marginTop="@dimen/dim_30_dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_video_title02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="别克君威，购车零负担"
+                    android:textSize="@dimen/dim_25_sp"
+                    android:textStyle="bold" >
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim_10_dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_video_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="新君威在外观上有很大变化，内饰细节升级，预计售价20-30万。该款君威并未做改动，依然沿用现款的1.6T、2.0L和2.0T发动机，但调教可能会有所提升。匹配6档手自一体和6档手动变速器，同时新增的安全配置应该会出现在高配车型上。另外，还了解到国产新君威可能还将推出一款混动版车型。"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/dim_22_sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_video_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/ll_video_show"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dim_15_dp"
+                android:background="@drawable/selector_button_focused_click"
+                android:padding="@dimen/dim_30_dp"
+                android:text="立即播放"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/dim_25_sp" />
+
+            <requestFocus />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

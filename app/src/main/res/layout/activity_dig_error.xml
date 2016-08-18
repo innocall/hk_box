@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dim_07_dp">
+
+        <TextView
+            android:id="@+id/errorMsg"
+            android:layout_marginLeft="@dimen/dim_07_dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dim_22_sp"
+            android:text="您好，您使用的柠檬TV电视盒出现问题，请记住您的柠檬账号，并联系客服。" />
+
+        <TextView
+            android:id="@+id/errorCode"
+            android:layout_marginLeft="@dimen/dim_07_dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_10_dp"
+            android:textSize="@dimen/dim_22_sp"
+            android:text="1、错误码：00000" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_marginLeft="@dimen/dim_07_dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:textSize="@dimen/dim_22_sp"
+            android:visibility="gone"/>
+        
+         <TextView
+            android:id="@+id/username"
+            android:layout_marginLeft="@dimen/dim_07_dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:textSize="@dimen/dim_22_sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/wifimac"
+            android:layout_marginLeft="@dimen/dim_07_dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dim_22_sp"
+            android:visibility="gone"
+            android:text="3、无线mac地址：00-00-00-00-00-00" />
+        
+         <TextView
+            android:id="@+id/echmac"
+            android:layout_marginLeft="@dimen/dim_07_dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dim_10_dp"
+            android:textSize="@dimen/dim_22_sp"
+            android:visibility="gone"
+            android:text="4、有线mac地址：00-00-00-00-00-00" />
+    </LinearLayout>
+
+
+</RelativeLayout>

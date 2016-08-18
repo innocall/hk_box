@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_marginTop="@dimen/dim_15_dp"
+            android:layout_marginLeft="@dimen/dim_15_dp"
+            android:layout_marginRight="@dimen/dim_15_dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" >
+
+            <com.great.stb.MyView.MyGridView
+                android:id="@+id/gv_video_list05"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="@dimen/dim_13_dp"
+                android:verticalSpacing="@dimen/dim_13_dp"
+                android:descendantFocusability="afterDescendants"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="6"
+                android:scrollbars="vertical" >
+            </com.great.stb.MyView.MyGridView>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

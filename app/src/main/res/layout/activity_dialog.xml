@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:misc="http://schemas.android.com/apk/res/com.great.stb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dim_30_dp"
+        android:layout_marginRight="@dimen/dim_25_dp"
+        android:layout_marginBottom="@dimen/dim_15_dp"
+        android:layout_marginTop="@dimen/dim_15_dp"
+        android:orientation="vertical" >
+
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/msg1"
+            android:layout_marginBottom="@dimen/dim_07_dp"
+            android:textColor="#fff"
+            android:textSize="@dimen/dim_28_sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dim_07_dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/msg2"
+                android:textColor="#fff"
+                android:textSize="@dimen/dim_28_sp" />
+
+           <!--  <com.great.stb.MyView.SmoothButton
+                android:id="@+id/check_wifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/red_button"
+                android:text="@string/msg"
+                misc:transitionDrawable="@drawable/red_transition_list"
+                misc:transitionDrawableLength="4"
+                misc:transitionTextColorDown="#aaa"
+                misc:transitionTextColorUp="#eee" /> -->
+        </LinearLayout>
+        
+         <TextView
+             android:id="@+id/msg_tip"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="#fff"
+             android:textSize="@dimen/dim_28_sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dim_60_dp"
+        android:layout_marginRight="@dimen/dim_60_dp"
+        android:layout_marginTop="@dimen/dim_40_dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="@dimen/dim_100_dp"
+            android:layout_height="@dimen/dim_80_dp"
+            android:scaleType="fitCenter"
+            android:background="@drawable/left_arrow" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dim_05_dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_video_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dip"
+                android:text="本地"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/dim_30_sp" />
+
+            <TextView
+                android:id="@+id/tv_video_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:text="本地图片"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/dim_25_sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 三块显示部分 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dim_80_dp"
+        android:layout_marginLeft="@dimen/dim_60_dp"
+        android:layout_marginRight="@dimen/dim_60_dp"
+        android:layout_marginTop="@dimen/dim_20_dp"
+        android:background="@drawable/local_music_bg"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_local_image_no"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dim_05_dp"
+            android:gravity="center"
+            android:text="无图片文件"
+            android:textColor="#04102E"
+            android:textSize="@dimen/dim_30_sp"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/listAllMusic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dim_10_dp" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>
