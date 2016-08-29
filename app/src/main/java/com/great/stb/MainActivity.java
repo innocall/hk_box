@@ -15,6 +15,7 @@ import com.great.stb.dao.ElementDAO;
 import com.great.stb.database.SmartSTBSQLiteOpenHelper;
 import com.great.stb.util.ImageUtils;
 import com.great.stb.util.Util;
+import com.umeng.analytics.MobclickAgent;
 
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
@@ -193,6 +194,18 @@ public class MainActivity extends Activity implements OnClickListener,
 		// 获取顶部应用日志
 		// initAppTop();
 
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		MobclickAgent.onResume(this);
+	}
+
+	@Override
+	public void onPause() {
+		super.onPause();
+		MobclickAgent.onPause(this);
 	}
 
 	private void initLogText() {

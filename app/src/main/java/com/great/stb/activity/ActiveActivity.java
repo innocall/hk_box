@@ -32,6 +32,7 @@ import com.great.stb.bean.UpdateResponse;
 import com.great.stb.common.UpdateRequest;
 import com.great.stb.dao.ElementDAO;
 import com.great.stb.util.*;
+import com.umeng.analytics.MobclickAgent;
 
 public class ActiveActivity extends Activity {
 
@@ -123,6 +124,20 @@ public class ActiveActivity extends Activity {
 		}
 		initData();
 
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		MobclickAgent.onPageStart("ActiveActivity"); //统计页面(仅有Activity的应用中SDK自动调用，不需要单独写。"SplashScreen"为页面名称，可自定义)
+		MobclickAgent.onResume(this);
+	}
+
+	@Override
+	public void onPause() {
+		super.onPause();
+		MobclickAgent.onPageEnd("ActiveActivity"); // （仅有Activity的应用中SDK自动调用，不需要单独写）保证 onPageEnd 在onPause 之前调用,因为 onPause 中会保存信息。"SplashScreen"为页面名称，可自定义
+		MobclickAgent.onPause(this);
 	}
 
 	private void initData() {

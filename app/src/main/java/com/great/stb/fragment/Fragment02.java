@@ -35,6 +35,7 @@ import android.widget.TextView;
 import com.google.code.microlog4android.config.PropertyConfigurator;
 import com.great.stb.R;
 import com.great.stb.dao.BlackListDao;
+import com.umeng.analytics.MobclickAgent;
 
 /**
  * Fragment02
@@ -269,4 +270,15 @@ public class Fragment02 extends Fragment {
 	}
 
 
+	@Override
+	public void onResume() {
+		super.onResume();
+		MobclickAgent.onPageStart("Fragement02"); //统计页面，"MainScreen"为页面名称，可自定义
+	}
+
+	@Override
+	public void onPause() {
+		super.onPause();
+		MobclickAgent.onPageEnd("Fragement02");
+	}
 }

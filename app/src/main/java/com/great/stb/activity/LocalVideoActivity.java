@@ -10,6 +10,7 @@ import com.great.stb.adapter.VideoAdapter;
 import com.great.stb.bean.ImagesSD;
 import com.great.stb.bean.Music;
 import com.great.stb.util.Util;
+import com.umeng.analytics.MobclickAgent;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -47,6 +48,20 @@ public class LocalVideoActivity extends Activity {
 			listView.setAdapter(adapter);
 		}
 	};
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		MobclickAgent.onPageStart("LocalVideoActivity"); //统计页面(仅有Activity的应用中SDK自动调用，不需要单独写。"SplashScreen"为页面名称，可自定义)
+		MobclickAgent.onResume(this);
+	}
+
+	@Override
+	public void onPause() {
+		super.onPause();
+		MobclickAgent.onPageEnd("LocalVideoActivity"); // （仅有Activity的应用中SDK自动调用，不需要单独写）保证 onPageEnd 在onPause 之前调用,因为 onPause 中会保存信息。"SplashScreen"为页面名称，可自定义
+		MobclickAgent.onPause(this);
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

@@ -5,6 +5,7 @@ import com.great.stb.activity.Grallery3DActivity;
 import com.great.stb.activity.LocalAudioActivity;
 import com.great.stb.activity.LocalImageActivity;
 import com.great.stb.activity.LocalVideoActivity;
+import com.umeng.analytics.MobclickAgent;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -107,5 +108,17 @@ public class Fragment03 extends Fragment implements OnClickListener {
 				break;
 
 		}
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		MobclickAgent.onPageStart("Fragement03"); //统计页面，"MainScreen"为页面名称，可自定义
+	}
+
+	@Override
+	public void onPause() {
+		super.onPause();
+		MobclickAgent.onPageEnd("Fragement03");
 	}
 }

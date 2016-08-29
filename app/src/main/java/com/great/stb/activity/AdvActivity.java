@@ -15,6 +15,7 @@ import com.great.stb.dao.ElementDAO;
 import com.great.stb.preorder.PreorderActivity;
 import com.great.stb.util.ImageUtils;
 import com.great.stb.util.Util;
+import com.umeng.analytics.MobclickAgent;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -88,6 +89,20 @@ public class AdvActivity extends Activity {
 		actType = b.getString("actType");
 		code = b.getString("code");
 		init();
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		MobclickAgent.onPageStart("AdvActivity"); //统计页面(仅有Activity的应用中SDK自动调用，不需要单独写。"SplashScreen"为页面名称，可自定义)
+		MobclickAgent.onResume(this);
+	}
+
+	@Override
+	public void onPause() {
+		super.onPause();
+		MobclickAgent.onPageEnd("AdvActivity"); // （仅有Activity的应用中SDK自动调用，不需要单独写）保证 onPageEnd 在onPause 之前调用,因为 onPause 中会保存信息。"SplashScreen"为页面名称，可自定义
+		MobclickAgent.onPause(this);
 	}
 
 	private void init() {

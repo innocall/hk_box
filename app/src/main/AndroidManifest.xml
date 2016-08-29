@@ -35,6 +35,9 @@
         android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
         <uses-library android:name="android.test.runner" />
 
+        <meta-data android:value="57be5aad67e58e64d90006da" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="bgy" android:name="UMENG_CHANNEL"/>
+
         <activity
             android:name="com.great.stb.activity.SplashActivity"
             android:icon="@drawable/logo"

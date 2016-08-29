@@ -3,6 +3,7 @@ package com.great.stb.fragment;
 import com.great.stb.R;
 import com.great.stb.activity.AccountInfoActivity;
 import com.great.stb.activity.LocalInfoActivity;
+import com.umeng.analytics.MobclickAgent;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -36,7 +37,17 @@ public class Fragment04 extends Fragment implements OnClickListener {
 
 	}
 
+	@Override
+	public void onResume() {
+		super.onResume();
+		MobclickAgent.onPageStart("Fragement04"); //统计页面，"MainScreen"为页面名称，可自定义
+	}
 
+	@Override
+	public void onPause() {
+		super.onPause();
+		MobclickAgent.onPageEnd("Fragement04");
+	}
 
 	private void initData() {
 

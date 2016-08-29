@@ -14,6 +14,7 @@ import com.great.stb.bean.ElementMode;
 import com.great.stb.dao.ElementDAO;
 import com.great.stb.util.SystemAppUtils;
 import com.great.stb.util.Util;
+import com.umeng.analytics.MobclickAgent;
 
 import android.app.Fragment;
 import android.app.ProgressDialog;
@@ -167,7 +168,17 @@ public class Fragment01 extends Fragment implements OnClickListener,
 
 	};
 
+	@Override
+	public void onResume() {
+		super.onResume();
+		MobclickAgent.onPageStart("Fragement01"); //统计页面，"MainScreen"为页面名称，可自定义
+	}
 
+	@Override
+	public void onPause() {
+		super.onPause();
+		MobclickAgent.onPageEnd("Fragement01");
+	}
 
 	private class adverSmalldynamic implements Runnable {
 		@Override
@@ -393,6 +404,7 @@ public class Fragment01 extends Fragment implements OnClickListener,
 		}
 		switch (v.getId()) {
 			case R.id.ib_adver_big:
+				MobclickAgent.onEvent(getActivity(), "ib_adver_big");
 				if(location==1){
 					String actType = actionAdver.get(0);
 					actDataAction(actType, "D10");
@@ -423,33 +435,40 @@ public class Fragment01 extends Fragment implements OnClickListener,
 //			startActivity(intent);
 //			ib_adver_big.setImageResource(R.drawable.adver_big);
 				break;
-
 			case R.id.ib_adver_small_01:
+				MobclickAgent.onEvent(getActivity(), "ib_adver_small_01");
 				actDataAction(actionAdver.get(0), "D10");
 				break;
 			case R.id.ib_adver_small_02:
+				MobclickAgent.onEvent(getActivity(), "ib_adver_small_02");
 				actDataAction(actionAdver.get(1), "D20");
 				break;
 			case R.id.ib_adver_small_03:
+				MobclickAgent.onEvent(getActivity(), "ib_adver_small_03");
 				actDataAction(actionAdver.get(2), "D30");
 				break;
 			case R.id.ib_adver_small_04:
+				MobclickAgent.onEvent(getActivity(), "ib_adver_small_04");
 				actDataAction(actionAdver.get(3), "D40");
 				break;
 			case R.id.ib_adver_small_05:
+				MobclickAgent.onEvent(getActivity(), "ib_adver_small_05");
 				actDataAction(actionAdver.get(4), "D50");
 				break;
 			case R.id.ib_adver_small_06:
+				MobclickAgent.onEvent(getActivity(), "ib_adver_small_06");
 				actDataAction(actionAdver.get(5), "D60");
 				break;
 			case R.id.ib_adver_small_07:
+				MobclickAgent.onEvent(getActivity(), "ib_adver_small_07");
 				actDataAction(actionAdver.get(6), "D70");
 				break;
 			case R.id.ib_adver_small_08:
+				MobclickAgent.onEvent(getActivity(), "ib_adver_small_08");
 				actDataAction(actionAdver.get(7), "D80");
 				break;
 			case R.id.ib_model_01:
-
+				MobclickAgent.onEvent(getActivity(), "ib_model_01");
 				String actType01 = actionMenu.get(0);
 				actDataAction(actType01, "E10");
 
@@ -459,6 +478,7 @@ public class Fragment01 extends Fragment implements OnClickListener,
 //			startActivity(intent_model01);
 				break;
 			case R.id.ib_model_02:
+				MobclickAgent.onEvent(getActivity(), "ib_model_02");
 				String actType02 = actionMenu.get(1);
 				actDataAction(actType02, "E20");
 //			Intent intent_3Dgallery = new Intent(getActivity(),Grallery3DActivity.class);
@@ -466,7 +486,7 @@ public class Fragment01 extends Fragment implements OnClickListener,
 
 				break;
 			case R.id.ib_model_03:
-
+				MobclickAgent.onEvent(getActivity(), "ib_model_03");
 				String actType03 = actionMenu.get(2);
 				actDataAction(actType03, "E30");
 
@@ -475,7 +495,7 @@ public class Fragment01 extends Fragment implements OnClickListener,
 
 				break;
 			case R.id.ib_model_04:
-
+				MobclickAgent.onEvent(getActivity(), "ib_model_04");
 				String actType04 = actionMenu.get(3);
 				actDataAction(actType04, "E40");
 
@@ -493,10 +513,9 @@ public class Fragment01 extends Fragment implements OnClickListener,
 //			ComponentName component05 = new ComponentName("com.great.stb.enterprise","com.great.stb.enterprise.SplashActivity");
 //			intent_model05.setComponent(component05);
 //			startActivity(intent_model05);
-
+				MobclickAgent.onEvent(getActivity(), "ib_model_05");
 				String actType05 = actionMenu.get(4);
 				actDataAction(actType05, "E50");
-
 				break;
 
 		}

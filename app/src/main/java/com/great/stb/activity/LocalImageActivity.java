@@ -10,6 +10,7 @@ import com.great.stb.adapter.MusicAdapter;
 import com.great.stb.bean.ImagesSD;
 import com.great.stb.bean.Music;
 import com.great.stb.util.Util;
+import com.umeng.analytics.MobclickAgent;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -56,6 +57,20 @@ public class LocalImageActivity extends Activity {
 		setContentView(R.layout.activity_local_image);
 		pd = new ProgressDialog(this);
 		initData();
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		MobclickAgent.onPageStart("LocalImageActivity"); //统计页面(仅有Activity的应用中SDK自动调用，不需要单独写。"SplashScreen"为页面名称，可自定义)
+		MobclickAgent.onResume(this);
+	}
+
+	@Override
+	public void onPause() {
+		super.onPause();
+		MobclickAgent.onPageEnd("LocalImageActivity"); // （仅有Activity的应用中SDK自动调用，不需要单独写）保证 onPageEnd 在onPause 之前调用,因为 onPause 中会保存信息。"SplashScreen"为页面名称，可自定义
+		MobclickAgent.onPause(this);
 	}
 
 	private void initData() {

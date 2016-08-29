@@ -2,6 +2,7 @@ package com.great.stb.fragment;
 
 
 import com.great.stb.R;
+import com.umeng.analytics.MobclickAgent;
 
 import android.app.Fragment;
 import android.content.ComponentName;
@@ -51,5 +52,17 @@ public class Fragment05 extends Fragment {
 			}
 		});
 		
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		MobclickAgent.onPageStart("Fragement05"); //统计页面，"MainScreen"为页面名称，可自定义
+	}
+
+	@Override
+	public void onPause() {
+		super.onPause();
+		MobclickAgent.onPageEnd("Fragement05");
 	}
 }
